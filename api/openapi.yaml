@@ -1,0 +1,17 @@
+openapi: '3.0.3'
+
+info:
+  description: Unicorn Tool
+  version: 0.1.0
+  title: Unicorn Tool
+
+servers:
+  - url: http://localhost:3010
+
+paths:
+  /v0/listUsers:
+    get:
+      description: Returns a list of users
+      responses:
+        200:
+          description: Response
