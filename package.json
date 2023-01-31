@@ -1,0 +1,25 @@
+{
+  "name": "unicorntool",
+  "version": "1.0.0",
+  "description": "Unicorn Tool for UCSC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsteinb/UnicornTool.git"
+  },
+  "author": "Aaron Steinberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azsteinb/UnicornTool/issues"
+  },
+  "homepage": "https://github.com/azsteinb/UnicornTool#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-openapi-validator": "^5.0.1",
+    "js-yaml": "^4.1.0",
+    "swagger-ui-express": "^4.6.0"
+  }
+}
