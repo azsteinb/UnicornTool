@@ -9,9 +9,52 @@ servers:
   - url: http://localhost:3010
 
 paths:
-  /v0/listUsers:
+  /v0/list:
     get:
-      description: Returns a list of users
+      description: Search for Users
+      parameters:
+      - in: query
+        name: suspended
+        schema:
+          type: boolean
+        required: false
+      - in: query
+        name: email
+        schema:
+          type: string
+          format: email
+        required: false
       responses:
         200:
-          description: Response
+          description: List of Users
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/UsersList'
+        404:
+          description: No Users Found
+        default:
+          description: Unexpected error while searching for users
+  
+  /v0/drives/{email}:
+    get:
+      description: Returns a list of drives given owner's email
+      parameters:
+      - name: email
+        in: path
+        description: Email Address
+        required: true
+        schema:
+          type: string
+          format: email
+      responses:
+        200:
+          description: List of drives
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/DrivesList'
+        404:
+          description: No Drives Found
+        default:
+          description: Unexpected error while searching for drives
