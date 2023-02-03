@@ -58,3 +58,15 @@ paths:
           description: No Drives Found
         default:
           description: Unexpected error while searching for drives
+
+components:
+  schemas:
+    Drive:
+      type: object
+      properties:
+        drive-id:
+          type: string
+        owner:
+          type: string
+          format: email
+        
