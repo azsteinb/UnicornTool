@@ -1,7 +1,8 @@
 # Unicorn Tool
 Made by Aaron Steinberg for the University of California Santa Cruz ITS Team
 ## Requirements
-+ Python
++ Node
++ Express
 + Google API Key
 + Google Admin Permissions
 ## Purpose
