@@ -58,7 +58,15 @@ paths:
           description: No Drives Found
         default:
           description: Unexpected error while searching for drives
-
+  
+  /v0/drives/transfer:
+    post:
+      description: Deletes
+      required true:
+      content:
+        application/json:
+          schema:
+            $ref: '#components/schemas/TransferContract'
 components:
   schemas:
     Drive:
